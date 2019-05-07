@@ -54,15 +54,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className='messageWrapper'>
-        {this.messageView()}
-        <input
-          className='messageBox'
-          type='text'
-          value={this.state.message}
-          onChange={this.handleChange}
-        />
-        <button className='submitButton' onClick={this.handleSubmit}>Submit</button>
+      <div>
+        <div className="clientNum">{'Number of Clients: ' + this.state.numOfClients}</div>
+        <div className='messageWrapper'>
+          {this.messageView()}
+          <input
+            className='messageBox'
+            type='text'
+            value={this.state.message}
+            onChange={this.handleChange}
+          />
+          <button className='submitButton' onClick={this.handleSubmit}>Submit</button>
+        </div>
       </div>
     )
   }
